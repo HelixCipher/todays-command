@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "identifier": "default",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "shell:allow-open",
+    "autostart:default",
+    "positioner:default",
+    "notification:default",
+    "notification:allow-request-permission",
+    "notification:allow-show",
+    "notification:allow-is-permission-granted"
+  ]
+}
