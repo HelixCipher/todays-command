@@ -3,8 +3,10 @@
 
 <img align="left" width="250" height="250" src="https://raw.githubusercontent.com/HelixCipher/todays-command/main/logo.png">
 
-A beautiful desktop widget for Linux that delivers daily Linux, Python, and SQL commands with interactive quizzes, streak tracking, and customizable reminders.
+A desktop widget for Linux that delivers daily Linux, Python, and SQL commands with interactive quizzes, streak tracking, and customizable reminders.
 
+<br><br>
+<br><br>
 
 
 ## What is Today's Command?
