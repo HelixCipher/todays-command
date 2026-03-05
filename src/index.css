@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Terminal-inspired design system for Today's Command widget */
+
+@layer base {
+  :root {
+    --background: 220 20% 10%;
+    --foreground: 220 15% 90%;
+
+    --card: 220 20% 14%;
+    --card-foreground: 220 15% 90%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 220 15% 90%;
+
+    --primary: 142 70% 45%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 220 15% 85%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 220 15% 22%;
+    --accent-foreground: 220 15% 90%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 18%;
+    --ring: 142 70% 45%;
+
+    --radius: 0.75rem;
+
+    /* Category accent colors */
+    --linux: 142 70% 45%;
+    --python: 45 90% 55%;
+    --sql: 210 90% 55%;
+    --shuffle: 280 70% 60%;
+
+    /* Gradients */
+    --gradient-linux: linear-gradient(135deg, hsl(142 70% 45%), hsl(160 60% 40%));
+    --gradient-python: linear-gradient(135deg, hsl(45 90% 55%), hsl(35 85% 50%));
+    --gradient-sql: linear-gradient(135deg, hsl(210 90% 55%), hsl(230 80% 55%));
+    --gradient-shuffle: linear-gradient(135deg, hsl(280 70% 60%), hsl(320 70% 55%));
+    --gradient-card: linear-gradient(180deg, hsl(220 20% 16%), hsl(220 20% 12%));
+
+    /* Shadows */
+    --shadow-glow-linux: 0 0 30px hsl(142 70% 45% / 0.2);
+    --shadow-glow-python: 0 0 30px hsl(45 90% 55% / 0.2);
+    --shadow-glow-sql: 0 0 30px hsl(210 90% 55% / 0.2);
+    --shadow-glow-shuffle: 0 0 30px hsl(280 70% 60% / 0.2);
+    --shadow-card: 0 4px 24px hsl(220 30% 5% / 0.4);
+
+    --sidebar-background: 220 20% 12%;
+    --sidebar-foreground: 220 15% 85%;
+    --sidebar-primary: 142 70% 45%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 220 15% 90%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 142 70% 45%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 220 15% 90%;
+
+    --card: 220 20% 14%;
+    --card-foreground: 220 15% 90%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 220 15% 90%;
+
+    --primary: 142 70% 45%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 220 15% 85%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 220 15% 22%;
+    --accent-foreground: 220 15% 90%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 18%;
+    --ring: 142 70% 45%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 220 15% 85%;
+    --sidebar-primary: 142 70% 45%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 220 15% 90%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 142 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body, #root {
+    @apply bg-transparent;
+    overflow: hidden;
+  }
+
+  body {
+    @apply text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+    background: transparent !important;
+  }
+
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-gradient-linux {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-linux);
+  }
+
+  .text-gradient-python {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-python);
+  }
+
+  .text-gradient-sql {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-sql);
+  }
+
+  .text-gradient-shuffle {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-shuffle);
+  }
+
+  .glow-linux {
+    box-shadow: var(--shadow-glow-linux);
+  }
+
+  .glow-python {
+    box-shadow: var(--shadow-glow-python);
+  }
+
+  .glow-sql {
+    box-shadow: var(--shadow-glow-sql);
+  }
+
+  .glow-shuffle {
+    box-shadow: var(--shadow-glow-shuffle);
+  }
+}
